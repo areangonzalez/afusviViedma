@@ -1,0 +1,115 @@
+.navbar-pril {
+  background: #084B8A;
+  border: 0 !important;
+  -webkit-box-shadow: 0 1px 4px 2px #444;
+  -moz-box-shadow: 0 1px 4px 2px #444;
+  box-shadow: 0 1px 4px 2px #444;
+  border-radius: 0;
+}
+.navbar-header > a {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.navbar-header > a > img{
+  float: left;
+  margin-right: 10px;
+}
+.navbar-header > a > span {
+  display: block;
+  color: #aaa;
+}
+.navbar-brand {
+  color: #fff;
+}
+.navbar-nav > li {
+  margin: 0 2px 0 2px;
+}
+.navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-nav > li > a:hover {
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #A9E2F3;
+  -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  -moz-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.navbar-nav > .active > a {
+  color: #A9E2F3;
+}
+.navbar-nav > .active > a:hover {
+  color: #fff;
+  box-shadow: none !important;
+}
+.navbar-text{
+  color: white;
+  margin-top:0px;
+}
+
+.btn-outline-primary-dp {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    border: 0px;
+}
+
+.btn-margin-dropdown {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.btn-outline-white {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.dropdown-menu {
+  background: #084B8A;
+}
+.dropdown-item:hover {
+  background: #aad11f;
+  color: #aaa;
+}
+.dropdown-item {
+  color: #fff;
+}
+
+.navbar-header > a > span {
+  display: block;
+  color: #fff;
+}
+
+/* .dropdown {
+  position: relative;
+}
+.button-dropdown{
+  margin-top: 8px;
+  margin-bottom: -8px;
+}
+.dropdown-toggle:focus{
+  outline-color: #084B8A;
+} */
+
+button.navbar-toggler > span {
+  color: #fff;
+}
+.li-style {
+  border-bottom: 1px ; 
+}
+.li-style:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  z-index: 10;
+}
+
+.show .nav-item > a {
+  padding-left: 10px !important;
+}

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+
+// Routing
+import { AppRoutingModule } from "./app.routing.module";
+// modulos 
+import { LayoutModule } from "./layout/layout.module";
 
 import { AppComponent } from './app.component';
 
@@ -10,6 +15,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    LayoutModule,
+    NgbCollapseModule,
     NgbModule.forRoot()
   ],
   providers: [],

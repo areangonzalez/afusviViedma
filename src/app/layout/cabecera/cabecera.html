@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-pril fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span>
+      </button>
+    <!-- <a class="navbar-brand" [routerLink]="['inicio']"> -->
+    <a class="navbar-brand">
+        <span>Algo</span>
+        <!-- <img src="../../../assets/img/logomarcarn.png" width="60" height="40" alt="Ministerio desarrollo social"> -->
+    </a>
+    <!-- <a class="navbar-brand" href="#">PRIL</a> -->
+    <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed" >
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed">
+                <a class="nav-link" ><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed">
+                <a class="nav-link"><i class="fas fa-dolly"></i> Otra página</a>
+            </li>
+        </ul>
+    </div>
+</nav>
