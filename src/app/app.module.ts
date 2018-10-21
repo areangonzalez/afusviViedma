@@ -1,24 +1,25 @@
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { NgbModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
+// modulos 
+import { CabeceraComponent, SharedModule } from "./shared";
+//componentes
+import { AppComponent } from './app.component';
 // Routing
 import { AppRoutingModule } from "./app.routing.module";
-// modulos 
-import { LayoutModule } from "./layout/layout.module";
-
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CabeceraComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    LayoutModule,
+    NgbModule.forRoot(),
     NgbCollapseModule,
-    NgbModule.forRoot()
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,32 +1,46 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-/* import { AppCustomPreloader } from './app-routing-loader';
+import { InicioModule } from "./inicio/inicio.module";
+export function loadInicioMocule() { return InicioModule; }
+import { EstadisticasModule } from "./estadisticas/estadisticas.module";
+export function loadEstadisticasModule() { return EstadisticasModule; }
 
-import { LoginFormComponent } from './components/login-form/login-form.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { FormAgenteComponent } from './components/form-agente/form-agente.component';
-import { VistaAgenteComponent } from './components/vista-agente/vista-agente.component';
-import { AuthGuard } from './guards/auth.guard'; */
+import { CustomPreloadingStrategy } from "./custom-preloading-strategy";
 
+
+const routes: Routes = [
+    {
+        path: '',
+        redirectTo: 'inicio',
+        pathMatch: 'full'
+    }, 
+    {
+        path: 'inicio',
+        loadChildren: loadInicioMocule,
+        data: { preload: true }
+    },
+    {
+        path: 'estadisticas',
+        loadChildren: loadEstadisticasModule,
+        data: { preload: true }
+    },
+    {
+        path: '**',
+        redirectTo: 'inicio',
+        pathMatch: 'full'
+    },
+];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot([
-            /* { path: '', component: LoginFormComponent },
-            { path: 'inicio', component: InicioComponent, data: { preload: true, title: 'Lista de agentes' }, canActivate: [AuthGuard] },
-            { path: 'inicio/form-agente', component: FormAgenteComponent, data: { title: 'Agregar Agente', breadcrumb: 'Agregar agente' }, canActivate: [AuthGuard] },
-            { path: 'inicio/form-agente/:id', component: FormAgenteComponent, data: { preload: true, title: 'Editar Agente', breadcrumb: 'Editar agente' }, canActivate: [AuthGuard] },
-            { path: 'inicio/vista-agente/:id', component: VistaAgenteComponent, data: { title: 'Ver Agente', breadcrumb: 'Ver agente' }, canActivate: [AuthGuard] },
- */
-            // otherside
-            { path: '**', redirectTo: '' }
-        ], /* { preloadingStrategy: AppCustomPreloader } */)
-    ],
-    exports: [
-        RouterModule
-    ],
-    providers: [
-    ]
+        RouterModule.forRoot(routes,{
+            // preload all modules; optionally we could
+            // implement a custom preloading strategy for just some
+            // of the modules (PRs welcome 😉)
+            preloadingStrategy: CustomPreloadingStrategy
+    })],
+    exports: [RouterModule],
+    providers: [CustomPreloadingStrategy]
 })
 export class AppRoutingModule { }
