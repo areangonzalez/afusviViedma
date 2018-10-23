@@ -5,14 +5,7 @@
                 <th scope="col">#</th>
                 <th scope="col" class="col-2 text-center">Equipo</th>
                 <th scope="col" class="text-center">PJ</th>
-                <!-- <th scope="col" class="text-center">PG</th>
-                <th scope="col" class="text-center">PE</th>
-                <th scope="col" class="text-center">PP</th>
-                <th scope="col" class="text-center">GF</th>
-                <th scope="col" class="text-center">GC</th>
-                <th scope="col" class="text-center">DG</th> -->
                 <th scope="col" class="text-center">Pts</th>
-                <th *ngIf="mostrarPromedio" scope="col" class="text-center">Promedio</th>
             </tr>
         </thead>
         <tbody>
@@ -22,14 +15,7 @@
                     {{equipo.nombre}} <img src="../../../assets/img/64x64.svg" alt="imagen de ejemplo" width="32">
                 </td>
                 <td scope="row" class="text-center">{{equipo.partidos_jugados}}</td>
-                <!-- <td scope="row" class="text-center">{{equipo.partidos_ganados}}</td>
-                <td scope="row" class="text-center">{{equipo.partidos_empatados}}</td>
-                <td scope="row" class="text-center">{{equipo.partidos_perdidos}}</td>
-                <td scope="row" class="text-center">{{equipo.goles_favor}}</td>
-                <td scope="row" class="text-center">{{equipo.goles_contra}}</td>
-                <td scope="row" class="text-center">{{diferenciaGoles(equipo.goles_favor, equipo.goles_contra)}}</td> -->
                 <td scope="row" class="text-center">{{equipo.puntos}}</td>
-                <td *ngIf="mostrarPromedio" scope="row" class="text-center">{{calcularPromedio(equipo.partidos_jugados, equipo.puntos)}}</td>
             </tr>
         </tbody>
     </table>
