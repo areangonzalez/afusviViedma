@@ -115,7 +115,6 @@ export class BreadcrumbComponent implements OnInit {
           }
 
         });
-        console.log(this.currentBreadcrumbs);
         this.breadcrumbService.store(this.currentBreadcrumbs);
       }
     });

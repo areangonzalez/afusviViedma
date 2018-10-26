@@ -1,0 +1,32 @@
+.carousel-caption {
+    padding: 0 !important;
+    bottom: 0 !important;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 75%;
+}
+.carousel-img {
+    border: 1px solid #aaa;
+    opacity: 0.35;
+}
+.titulos-fixture {
+    font-size: 24px;
+    font-style: oblique;
+}
+
+.vs-style-fixture {
+    font-size:110px;
+    margin-top: -10%;   
+    font-style: italic;
+    font-weight: 600;  
+}
+
+.pie-fixture {
+    font-size: 22px;
+    font-style: oblique;
+    margin-top: 6%; 
+}
