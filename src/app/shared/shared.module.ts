@@ -10,12 +10,12 @@ import { PromedioComponent } from './promedio';
     ],
     declarations: [
         GrupoComponent,
-        PromedioComponent
+        PromedioComponent,
     ],
     exports: [
         CommonModule,
         GrupoComponent,
-        PromedioComponent
-    ],
+        PromedioComponent,
+    ]
 })
 export class SharedModule { }

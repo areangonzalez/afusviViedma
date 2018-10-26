@@ -18,12 +18,12 @@ const routes: Routes = [
     {
         path: 'inicio',
         loadChildren: loadInicioMocule,
-        data: { preload: true }
+        data: { preload: true, breadcrumb: 'Inicio' }
     },
     {
         path: 'estadisticas',
         loadChildren: loadEstadisticasModule,
-        data: { preload: true }
+        data: { preload: true, breadcrumb: 'Estadisticas' }
     },
     {
         path: '**',

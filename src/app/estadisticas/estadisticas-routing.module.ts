@@ -10,10 +10,10 @@ const routes: Routes = [
         component: EstadisticasComponent,
         children: [
             { path: '', redirectTo: 'promedio', pathMatch: 'full' },
-            { path: 'promedio', component: PromedioComponent },
-            { path: 'ascenso-descenso', component: AscensoDescensoComponent },
-            { path: 'tabla-goleadores', component: GoleadoresComponent },
-            { path: 'lista-equipos', component: EquiposComponent },
+            { path: 'promedio', component: PromedioComponent, data: { breadcrumb: 'Promedio' } },
+            { path: 'ascenso-descenso', component: AscensoDescensoComponent, data: { breadcrumb: 'Promoción' } },
+            { path: 'tabla-goleadores', component: GoleadoresComponent, data: { breadcrumb: 'Tabla de goleadores' } },
+            { path: 'lista-equipos', component: EquiposComponent, data: { breadcrumb: 'Equipos' } },
             { path: '', redirectTo: 'promedio', pathMatch: 'full' }            
         ]
     }

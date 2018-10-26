@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 // modulos 
-import { CabeceraComponent, SharedModule } from "./shared";
+import { CabeceraComponent, BreadcrumbComponent, BreadcrumbsService, SharedModule } from "./shared";
 //componentes
 import { AppComponent } from './app.component';
 // Routing
@@ -12,7 +12,8 @@ import { AppRoutingModule } from "./app.routing.module";
 @NgModule({
   declarations: [
     AppComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +22,9 @@ import { AppRoutingModule } from "./app.routing.module";
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BreadcrumbsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

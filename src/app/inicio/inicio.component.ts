@@ -28,10 +28,9 @@ export class InicioComponent implements OnInit {
         { nombre: 'Las Casitas', partidos_jugados: 7, partidos_ganados: 1, partidos_empatados: 2, partidos_perdidos: 4, goles_favor: 20, goles_contra: 37, diferencia_goles: -17, puntos: 4 }
     ];
 
+    constructor(){}
+
 
     ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
-        
     }
 }
