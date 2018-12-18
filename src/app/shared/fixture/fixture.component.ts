@@ -19,14 +19,9 @@ export class FixtureComponent implements OnInit {
     ];
 
 
-     images = [1, 2, 3,4,5,6,7,8].map(() => `../../../assets/img/futsal2.png`); 
+    images = [1, 2, 3,4,5,6,7,8].map(() => `../../../assets/img/futsal3.jpg`);
+    //  images = [1].map(() => `../../../assets/img/futsal3.jpg`);
 
     ngOnInit() {
     }
 }
-
-/* @Component({ selector: 'ngbd-carousel-basic', 
-template: './fixture.component.html'
- })
-export class NgbdCarouselBasic {
-} */

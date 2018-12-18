@@ -1,4 +1,4 @@
-<div class="col-md-10 m-auto">
+<!-- <div class="m-auto">
     <div class="row grupo-border">
         <div class="col-md-2 align-self-center">
             <div class="d-flex justify-content-center">
@@ -19,37 +19,60 @@
             </div>
         </div>
     </div>
-</div>
-<div class="col-md-12 d-flex justify-content-center">
+</div> -->
+<div class="d-flex justify-content-center">
     <ngb-carousel *ngIf="images">
         <ng-template ngbSlide *ngFor="let equipos of equiposFixture; let i = index;" >
-            <img class="carousel-img" [src]="images[i]"  alt="Random first slide">
-            <div class="carousel-caption">
-                <div class="row">
+          <img class="carousel-img" [src]="images[i]"  alt="Random first slide">
+          <div class="titulo-principal" ></div>
+          <div class="carousel-caption">
+                <div class="m-auto titulo-principal-fixture">
+                    <div class="row grupo-border ">
+                        <div class="col-md-2 align-self-center">
+                            <div class="d-flex justify-content-center">
+                                <img src="../../../assets/img/afusvi.png" alt="afusvi" width="40" height="40">
+                            </div>
+                        </div>
+                        <div class="col-md-8 align-self-center">
+                            <div class="d-flex justify-content-center">
+                                <h5>Fixture - Fecha 8</h5>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h6>Torneo Fridevi Clausura 1° "A" Masculino 2018</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-2 align-self-center">
+                            <div class="d-flex justify-content-center">
+                                <img src="../../../assets/img/afusvi.png" alt="afusvi" width="40" height="40">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row contenido-fixture">
                     <div class="col-md-12">
-                        <p class="titulos-fixture">
-                            {{equipos.fecha | date:'dd/MM/yyyy'}} - {{equipos.horario}} hs<br>{{equipos.lugar}}
-                        </p>
+                      <span *ngIf="(equipos.fecha != '')" class="titulos-fixture"> {{equipos.fecha | date:'dd/MM/yyyy'}} - {{equipos.horario}} hs - {{equipos.lugar}} </span>
+                      <span *ngIf="(equipos.fecha == '')" class="titulos-fixture" > - - </span>
                     </div>
                     <div class="col-md-12 align-self-center">
                         <div class="row">
                             <div class="col-md-5 d-flex justify-content-end">
-                                <p class="d-flex align-items-center">{{equipos.equipo_zona_1.nombre}}&nbsp;
-                                    <img *ngIf="(equipos.equipo_zona_1.nombre != '')" src="{{equipos.equipo_zona_1.escudo_img_url}}" alt="imagen de ejemplo" width="32">
+                                <p class="d-flex align-items-center" style="margin-top: 20px;">{{equipos.equipo_zona_1.nombre}}&nbsp;
+                                    <img *ngIf="(equipos.equipo_zona_1.nombre != '')" src="{{equipos.equipo_zona_1.escudo_img_url}}" alt="imagen de ejemplo" width="64">
                                 </p>
                             </div>
                             <div class="col-md-2 d-flex justify-content-center">
-                                <p class="d-flex align-items-center vs-style-fixture" >vs</p>
+                                <img src="../../../assets/img/vs2.png" alt="Versus" class="vs-style-fixture">
                             </div>
                             <div class="col-md-5 d-flex justify-content-start">
-                                <p class="d-flex align-items-center">
-                                    <img *ngIf="(equipos.equipo_zona_2.nombre != '')" src="{{equipos.equipo_zona_2.escudo_img_url}}" alt="imagen de ejemplo" width="32">
+                                <p class="d-flex align-items-center" style="margin-top: 20px;">
+                                    <img *ngIf="(equipos.equipo_zona_2.nombre != '')" src="{{equipos.equipo_zona_2.escudo_img_url}}" alt="imagen de ejemplo" width="64">
                                     &nbsp;{{equipos.equipo_zona_2.nombre}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 align-items-center">
-                        <p class="pie-fixture align-items-end">equipos.veedores</p>
+                        <p *ngIf="(equipos.veedores != '')" class="pie-fixture align-items-end">{{equipos.veedores}}</p>
+                        <p *ngIf="(equipos.veedores == '')" class="pie-fixture align-items-end"> - </p>
                     </div>
                 </div>
             </div>
