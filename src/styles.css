@@ -1,9 +1,30 @@
 @import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
 /* You can add global styles to this file, and also import other style files */
 
-.app-container {
+/* .app-container {
   position: absolute;
   width: 100%;
   overflow-y: auto;
   top:93px;
-} 
+} */
+
+body {
+  padding-top:80px;
+}
+.margenes-izq-der-cero {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.carousel-inner {
+  border-radius: 0.25rem !important;
+}
+/* Borde sin top con border redondeado inferior */
+.bb-grupo {
+  border: 1px solid #dee2e6 !important;
+  border-top: 0 !important;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.table {
+  margin-bottom: 0 !important;
+}

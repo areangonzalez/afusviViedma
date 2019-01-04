@@ -1,9 +1,11 @@
-<ul class="list-unstyled">
-    <li class="media m-4" *ngFor="let equipo of listaEquipos">
-        <img class="mr-3" src="../../../assets/img/64x64.svg" alt="Generic placeholder image">
-        <div class="media-body">
-            <h5 class="mt-0 mb-1">{{equipo.nombre}}</h5>
-            jugadores que conforman el equipo u otra descripción.
-        </div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let equipo of listaEquipos">
+      <div class="d-flex">
+          <img src="../../../assets/img/64x64.svg" alt="Generic placeholder image">
+          <div class="media-body ml-2">
+              <h5 class="mt-0 mb-1">{{equipo.nombre}}</h5>
+              jugadores que conforman el equipo u otra descripción.
+          </div>
+      </div>
     </li>
 </ul>

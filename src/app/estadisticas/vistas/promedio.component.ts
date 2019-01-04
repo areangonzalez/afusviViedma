@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'estadisticas-promedio',
-    templateUrl: './promedio.html'
+    templateUrl: './promedio.html',
+    styleUrls: ['./vistas.css']
 })
 export class PromedioComponent implements OnInit {
     //title = 'afusviViedma';

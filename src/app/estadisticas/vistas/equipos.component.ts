@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'estadisticas-equipos',
-    templateUrl: './equipos.html'
+    templateUrl: './equipos.html',
+    styleUrls: ['./vistas.css']
 })
 export class EquiposComponent implements OnInit {
-    //title = 'afusviViedma';
     public listaEquipos = [
         { id: 1, nombre: 'A.E.C. "A"' },
         { id: 10, nombre: 'A.E.C. "B"' },

@@ -8,6 +8,7 @@ import { BreadcrumbsService } from "./breadcrumbs.service";
 @Component({
   selector: "breadcrumb",
   templateUrl: './breadcrumbs.component.html',
+  styleUrls: ['./breadcrumbs.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 
@@ -57,13 +58,13 @@ export class BreadcrumbComponent implements OnInit {
       while (currentRoute.children.length > 0) {
         let childrenRoutes: ActivatedRoute[] = currentRoute.children;
         let breadCrumbLabel: string = "";
-        
+
 
         // iterate over each children
         childrenRoutes.forEach(route => {
           // Set currentRoute to this route
           currentRoute = route;
-          
+
           // Verify this is the primary route
           if (route.outlet !== PRIMARY_OUTLET) {
             return;

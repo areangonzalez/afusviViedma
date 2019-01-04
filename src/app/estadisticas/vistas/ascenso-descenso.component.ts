@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'estadisticas-ascenso-descenso',
     templateUrl: './ascenso-descenso.html',
-    styles: ['.ref-red {border: solid 1px red; background:#f5c6cb; color:#f5c6cb;} .ref-green { border: solid 1px green; background:#c3e6cb; color:#c3e6cb; } ']
-    
-    
+    styleUrls: ['./vistas.css']
+
+
 })
 export class AscensoDescensoComponent implements OnInit {
     //title = 'afusviViedma';
