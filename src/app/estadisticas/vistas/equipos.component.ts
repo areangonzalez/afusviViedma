@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TorneoService } from 'src/app/core/services';
+import { ListaEquipos } from 'src/app/core/models';
 
 @Component({
     selector: 'estadisticas-equipos',
@@ -6,28 +8,27 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./vistas.css']
 })
 export class EquiposComponent implements OnInit {
-    public listaEquipos = [
-        { id: 1, nombre: 'A.E.C. "A"' },
-        { id: 10, nombre: 'A.E.C. "B"' },
-        { id: 8, nombre: 'Barrio Sud F.S.' },
-        { id: 14, nombre: 'Churretes F.C.' },
-        { id: 2, nombre: 'Defensores de Viedma' },
-        { id: 9, nombre: 'Deportivo Boulevard' },
-        { id: 11, nombre: 'Deportivo Los Compadres Viedma' },
-        { id: 3, nombre: 'Deportivo del Sur' },
-        { id: 15, nombre: 'Fuerte al Medio' },
-        { id: 13, nombre: 'Las Casitas' },
-        { id: 5, nombre: 'Los Pekes Futsal' },
-        { id: 6, nombre: 'Los Tios sin T.A.C.C.' },
-        { id: 4, nombre: 'Nueva Genración F.C.' },
-        { id: 12, nombre: 'U.N.R.N. Sede Atlántica' },
-        { id: 7, nombre: 'Unidos del Sur' },
-    ];
+
+  constructor(
+    private _torneoService: TorneoService
+  ){}
+
+    public listaEquipos: ListaEquipos;
 
 
     ngOnInit(): void {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
+      this.equipos();
+    }
 
+
+    private equipos(){
+      this._torneoService.equiposDelTorneo(2).subscribe(
+        datos => {
+          this.listaEquipos = datos;
+        }, error => {
+          console.log('UPS hubo un error', error);
+        });
     }
 }
