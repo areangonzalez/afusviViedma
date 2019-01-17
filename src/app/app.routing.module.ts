@@ -5,6 +5,8 @@ import { InicioModule } from "./inicio/inicio.module";
 export function loadInicioMocule() { return InicioModule; }
 import { EstadisticasModule } from "./estadisticas/estadisticas.module";
 export function loadEstadisticasModule() { return EstadisticasModule; }
+import { CampeonesModule } from "./campeones/campeones.module";
+export function loadCampeonesModule() { return CampeonesModule; }
 
 import { CustomPreloadingStrategy } from "./custom-preloading-strategy";
 
@@ -14,7 +16,7 @@ const routes: Routes = [
         path: '',
         redirectTo: 'inicio',
         pathMatch: 'full'
-    }, 
+    },
     {
         path: 'inicio',
         loadChildren: loadInicioMocule,
@@ -24,6 +26,11 @@ const routes: Routes = [
         path: 'estadisticas',
         loadChildren: loadEstadisticasModule,
         data: { preload: true, breadcrumb: 'Estadisticas' }
+    },
+    {
+        path: 'campeones',
+        loadChildren: loadCampeonesModule,
+        data: { preload: true, breadcrumb: 'Campeones'}
     },
     {
         path: '**',

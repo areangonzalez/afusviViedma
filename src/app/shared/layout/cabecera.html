@@ -5,7 +5,7 @@
       </button>
     <!-- <a class="navbar-brand" [routerLink]="['inicio']"> -->
     <a class="navbar-brand">
-        <img src="../../../assets/img/afusvi.png" width="55" height="55" alt="Asociación de futbol de salon viedma"> 
+        <img src="../../../assets/img/afusvi.png" width="55" height="55" alt="Asociación de futbol de salon viedma">
     </a>
     <!-- <a class="navbar-brand" href="#">PRIL</a> -->
     <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed" >
@@ -16,6 +16,9 @@
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
                 <a class="nav-link" [routerLink]="['/estadisticas']"><i class="fas fa-dolly"></i> Estadisticas</a>
             </li>
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
+              <a class="nav-link" [routerLink]="['/campeones']"><i class="fas fa-trophy"></i> Campeones</a>
+          </li>
         </ul>
     </div>
 </nav>
