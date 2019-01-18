@@ -11,6 +11,8 @@ import { TorneosModule } from "./torneos/torneos.module";
 export function loadTorneosModule() { return TorneosModule; }
 import { ReglamentoModule } from "./reglamento/reglamento.module";
 export function loadReglamentoModule() { return ReglamentoModule; }
+import { InstitucionalModule } from "./institucional/institucional.module";
+export function loadInstitucionalModule() { return InstitucionalModule; }
 
 import { CustomPreloadingStrategy } from "./custom-preloading-strategy";
 
@@ -51,7 +53,7 @@ const routes: Routes = [
           },
           {
             path: 'institucional',
-            loadChildren: loadCampeonesModule,
+            loadChildren: loadInstitucionalModule,
             data: { preload: true, breadcrumb: 'Institucional'}
           }
         ]
