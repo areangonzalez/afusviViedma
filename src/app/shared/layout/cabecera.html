@@ -11,14 +11,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed" >
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']" >
-                <a class="nav-link" [routerLink]="['/inicio']" ><i class="fas fa-home"></i> Inicio</a>
+                <a class="nav-link" [routerLink]="['/inicio']" >Inicio</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-                <a class="nav-link" [routerLink]="['/estadisticas']"><i class="fas fa-dolly"></i> Estadisticas</a>
+                <a class="nav-link" [routerLink]="['/inicio/estadisticas']">Estadisticas</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-              <a class="nav-link" [routerLink]="['/campeones']"><i class="fas fa-trophy"></i> Campeones</a>
-          </li>
+              <a class="nav-link" [routerLink]="['/inicio/torneos']">Torneos</a>
+            </li>
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
+              <a class="nav-link" [routerLink]="['/inicio/campeones']">Campeones</a>
+            </li>
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
+              <a class="nav-link" [routerLink]="['/inicio/reglamento']">Reglamento</a>
+            </li>
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
+              <a class="nav-link" [routerLink]="['/inicio/institucional']">Institucional</a>
+            </li>
         </ul>
     </div>
 </nav>
