@@ -9,6 +9,8 @@ import { CampeonesModule } from "./campeones/campeones.module";
 export function loadCampeonesModule() { return CampeonesModule; }
 import { TorneosModule } from "./torneos/torneos.module";
 export function loadTorneosModule() { return TorneosModule; }
+import { ReglamentoModule } from "./reglamento/reglamento.module";
+export function loadReglamentoModule() { return ReglamentoModule; }
 
 import { CustomPreloadingStrategy } from "./custom-preloading-strategy";
 
@@ -44,7 +46,7 @@ const routes: Routes = [
           },
           {
             path: 'reglamento',
-            loadChildren: loadCampeonesModule,
+            loadChildren: loadReglamentoModule,
             data: { preload: true, breadcrumb: 'Reglamento'}
           },
           {
