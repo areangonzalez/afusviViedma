@@ -14,12 +14,6 @@
   height: 270px;
   border: 1px solid #aaa;
   opacity: 0.65;
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-  /* width: 100%;
-  height: 100%; */
 }
 .titulos-fixture {
     font-size: 22px;
@@ -34,7 +28,6 @@
 .pie-fixture {
     font-size: 20px;
     font-style: oblique;
-    /* margin-top: 6%; */
 }
 .titulo-principal {
   background: #fff;

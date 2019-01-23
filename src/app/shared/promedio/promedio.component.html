@@ -1,9 +1,10 @@
-<div class="table-hover mb-3 bg-white bb-grupo">
+<div class="table-hover mb-3 bg-white bb-grupo table-sm">
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col" class="col-2 text-center">Equipo</th>
+                <th></th>
                 <th scope="col" class="text-center">PJ</th>
                 <th scope="col" class="text-center">PG</th>
                 <th scope="col" class="text-center">PE</th>
@@ -19,7 +20,10 @@
             <tr *ngFor="let equipo of datosEquipos; let i = index;" [ngClass]="{'table-success': (i == 12 && mostrarAscenso == true), 'table-danger': ((i == 13 || i == 14) && mostrarAscenso == true)}">
                 <th scope="row">{{i + 1}}°</th>
                 <td class="text-right">
-                    {{equipo.nombre}} <img src="../../../assets/img/64x64.svg" alt="imagen de ejemplo" width="32">
+                    {{equipo.nombre}}
+                </td>
+                <td>
+                    <img src="../../../assets/img/64x64.svg" alt="imagen de ejemplo" width="32">
                 </td>
                 <td scope="row" class="text-center">{{equipo.partidos_jugados}}</td>
                 <td scope="row" class="text-center">{{equipo.partidos_ganados}}</td>

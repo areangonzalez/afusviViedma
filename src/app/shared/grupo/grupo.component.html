@@ -1,9 +1,10 @@
-<div class="table-responsive">
+<div class="table-responsive table-sm">
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col" class="col-2 text-center">Equipo</th>
+                <th scope="col" class="text-center">Equipo</th>
+                <th></th>
                 <th scope="col" class="text-center">PJ</th>
                 <th scope="col" class="text-center">Pts</th>
             </tr>
@@ -12,7 +13,10 @@
             <tr *ngFor="let equipo of datosEquipos; let i = index">
                 <th scope="row">{{i + 1}}°</th>
                 <td class="text-right">
-                    {{equipo.nombre}} <img src="../../../assets/img/64x64.svg" alt="imagen de ejemplo" width="32">
+                    {{equipo.nombre}}
+                </td>
+                <td>
+                    <img src="../../../assets/img/64x64.svg" alt="imagen de ejemplo" width="32">
                 </td>
                 <td scope="row" class="text-center">{{equipo.partidos_jugados}}</td>
                 <td scope="row" class="text-center">{{equipo.puntos}}</td>
