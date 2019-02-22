@@ -1,23 +1,25 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule, NgbCollapseModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TrinityRingsSpinnerModule } from "angular-epic-spinners";
 
 // modulos
-import { CabeceraComponent, BreadcrumbComponent, BreadcrumbsService, SharedModule } from "./shared";
+import { CabeceraComponent, BreadcrumbComponent, BreadcrumbsService, LoaderComponent, SharedModule } from "./shared";
 import { CoreModule } from './core'
 //componentes
 import { AppComponent } from './app.component';
 // Routing
 import { AppRoutingModule } from "./app.routing.module";
 // Services
-//import { ApiService, TorneoService } from "./core/services";
+import { ErrorInterceptor } from './shared/helpers/error.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -25,12 +27,15 @@ import { AppRoutingModule } from "./app.routing.module";
     HttpClientModule,
     NgbCollapseModule,
     NgbCarouselModule,
+    TrinityRingsSpinnerModule,
     SharedModule,
     CoreModule,
     AppRoutingModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     BreadcrumbsService,
+    LoaderComponent
     /* ApiService,
     TorneoService */
   ],

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import {
   ApiService,
+  LoaderService,
   TorneoService,
   EquipoService
 } from './services';
@@ -16,6 +17,7 @@ import {
   providers: [
     //{ provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     ApiService,
+    LoaderService,
     TorneoService,
     EquipoService
   ],
