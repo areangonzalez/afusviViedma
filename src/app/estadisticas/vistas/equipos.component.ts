@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Component({
     selector: 'estadisticas-equipos',
     templateUrl: './equipos.html',
-    styleUrls: ['./vistas.css']
+    //styleUrls: ['./vistas.css']
 })
 export class EquiposComponent implements OnInit {
 

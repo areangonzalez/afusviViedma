@@ -5,7 +5,15 @@
   <div class="row flex-nowrap">
     <menu-izquierdo></menu-izquierdo>
     <main class="col-12 col-md-12 col-xl-12">
-      <breadcrumb></breadcrumb>
+      <div class="d-flex justify-content-between">
+        <breadcrumb></breadcrumb>
+        <div >
+            <a class="navbar-brand" [routerLink]="['inicio']" style="color: #666;">
+              <span class="font-weight-bold text-uppercase mr-3">Asociación Fútbol de Salón Valle Inferior</span>
+              <img src="../../../assets/img/afusvi.png" width="50" height="50" alt="Asociación de futbol de salon viedma">
+            </a>
+          </div>
+      </div>
       <router-outlet></router-outlet>
     </main>
   </div>
