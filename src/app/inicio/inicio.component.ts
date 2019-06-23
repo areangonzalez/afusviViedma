@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+
+
     //title = 'afusviViedma';
     public listaEquiposZona_1 = [
         { nombre: 'A.E.C. "A"', partidos_jugados: 6, partidos_ganados: 6, partidos_empatados: 0, partidos_perdidos: 0, goles_favor: 23, goles_contra: 9, diferencia_goles: 14, puntos: 12 },

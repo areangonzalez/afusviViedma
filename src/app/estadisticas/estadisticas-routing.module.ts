@@ -9,12 +9,12 @@ const routes: Routes = [
         path: '',
         component: EstadisticasComponent,
         children: [
-            { path: '', redirectTo: 'promedio', pathMatch: 'full' },
-            { path: 'promedio', component: PromedioComponent, data: { breadcrumb: 'Promedio' } },
-            { path: 'ascenso-descenso', component: AscensoDescensoComponent, data: { breadcrumb: 'Promoción' } },
+            { path: '', redirectTo: 'promocion', pathMatch: 'full' },
+            //{ path: 'promedio', component: PromedioComponent, data: { breadcrumb: 'Promedio' } },
+            { path: 'promocion', component: AscensoDescensoComponent, data: { breadcrumb: 'Promoción' } },
             { path: 'tabla-goleadores', component: GoleadoresComponent, data: { breadcrumb: 'Tabla de goleadores' } },
             { path: 'lista-equipos', component: EquiposComponent, data: { breadcrumb: 'Equipos' } },
-            { path: '', redirectTo: 'promedio', pathMatch: 'full' }            
+            { path: '', redirectTo: 'promocion', pathMatch: 'full' }
         ]
     }
 ];

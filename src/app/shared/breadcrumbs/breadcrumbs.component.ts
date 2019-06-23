@@ -102,7 +102,7 @@ export class BreadcrumbComponent implements OnInit {
             // Add breadcrumb
             let breadcrumb: IBreadcrumb = {
               label: breadCrumbLabel,
-              params: route.snapshot.params,
+              params: {},
               url: url
             };
             // Add the breadcrumb as 'prefixed'. It will appear before all breadcrumbs

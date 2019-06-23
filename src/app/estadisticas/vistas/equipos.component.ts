@@ -26,9 +26,11 @@ export class EquiposComponent implements OnInit {
 
 
     private obtenerEquipos() {
-      this._equipoService.equiposDelTorneo(2).subscribe(
+      //this._equipoService.equiposDelTorneo(2).subscribe(
+      this._equipoService.todosLosEquipos().subscribe(
         datos => {
-          this.listaEquipos = datos;
+          console.log(datos.equipo);
+          this.listaEquipos = datos.equipo;
         }, error => {
           console.log('UPS hubo un error', error);
         });

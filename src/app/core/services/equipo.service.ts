@@ -39,4 +39,8 @@ export class EquipoService {
     return this._apiService.get('/deportista',httpParams);
   }
 
+  todosLosEquipos(){
+    return this._apiService.get('/equipo');
+  }
+
 }

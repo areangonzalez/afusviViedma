@@ -16,7 +16,7 @@ import { InicioRoutingModule } from "./inicio-routing.module";
     providers: [
     ],
 })
-export class InicioModule { 
+export class InicioModule {
     constructor() {
         console.log('InicioModule loaded.');
     }

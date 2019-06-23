@@ -1,11 +1,12 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbModule, NgbCollapseModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TrinityRingsSpinnerModule } from "angular-epic-spinners";
 
 // modulos
-import { CabeceraComponent, BreadcrumbComponent, BreadcrumbsService, LoaderComponent, SharedModule } from "./shared";
+import { CabeceraComponent, MenuIzquierdoComponent, BreadcrumbComponent, BreadcrumbsService, LoaderComponent, SharedModule } from "./shared";
 import { CoreModule } from './core'
 //componentes
 import { AppComponent } from './app.component';
@@ -17,12 +18,13 @@ import { ErrorInterceptor } from './shared/helpers/error.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    CabeceraComponent,
+    CabeceraComponent, MenuIzquierdoComponent,
     BreadcrumbComponent,
     LoaderComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     HttpClientModule,
     NgbCollapseModule,

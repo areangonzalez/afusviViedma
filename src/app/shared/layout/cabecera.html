@@ -4,29 +4,29 @@
         <span class="oi oi-menu"></span>
       </button>
     <!-- <a class="navbar-brand" [routerLink]="['inicio']"> -->
-    <a class="navbar-brand">
+    <a class="navbar-brand" [routerLink]="['inicio']">
         <img src="../../../assets/img/afusvi.png" width="55" height="55" alt="Asociación de futbol de salon viedma">
     </a>
     <!-- <a class="navbar-brand" href="#">PRIL</a> -->
     <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed" >
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']" >
-                <a class="nav-link" [routerLink]="['/inicio']" >Inicio</a>
+            <!-- <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']" >
+                <a class="nav-link" [routerLink]="['inicio']" >Inicio</a>
+            </li> -->
+            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['inicio/estadisticas']">Estadisticas</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-                <a class="nav-link" [routerLink]="['/inicio/estadisticas']">Estadisticas</a>
+              <a class="nav-link" [routerLink]="['inicio/torneos']">Torneos</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-              <a class="nav-link" [routerLink]="['/inicio/torneos']">Torneos</a>
+              <a class="nav-link" [routerLink]="['inicio/campeones']">Campeones</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-              <a class="nav-link" [routerLink]="['/inicio/campeones']">Campeones</a>
+              <a class="nav-link" [routerLink]="['inicio/reglamento']">Reglamento</a>
             </li>
             <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-              <a class="nav-link" [routerLink]="['/inicio/reglamento']">Reglamento</a>
-            </li>
-            <li class="nav-item" (click)="isCollapsed = !isCollapsed" [routerLinkActive]="['active']">
-              <a class="nav-link" [routerLink]="['/inicio/institucional']">Institucional</a>
+              <a class="nav-link" [routerLink]="['inicio/institucional']">Institucional</a>
             </li>
         </ul>
     </div>
